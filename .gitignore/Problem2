@@ -1,16 +1,23 @@
+package com.ProjectEuler.Robert.java;
+
 public class Prob2 {
 	public static void main(String [] args)	{
-		int i = 1;
-		int j = 2;
-		int temp = i + j;
-		i = temp;
-		j = i;
+		
+		int x = 0;
+		int y = 1;
 		int sum = 0;
-		while(temp <= 4_000_000)	{
-			if(temp%2==0)	{
-				sum=sum+temp;			
+
+		
+		while(y <= 4000000)	{
+			int temp = x + y;
+			x = y;
+			y = temp;
+			if(temp % 2 == 0)	{
+				sum = temp + sum;
 			}
+			System.out.println("FB : " + x);
 		}
-		System.out.println(sum);
+		System.out.println();
+		System.out.println("The Sum of the even Fib numbers up to 4 mil is :  " +  sum);
 	}
 }
