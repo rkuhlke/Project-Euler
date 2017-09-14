@@ -1,0 +1,22 @@
+public class Prob6 {
+	public static void main(String [] args)	{
+		long sum = 0;
+		double i = 0;
+		while (i <= 100){
+			double j= Math.pow(i, 2);
+			
+			sum = (long) (sum + j);
+			i++;
+		}
+		System.out.println(sum);
+		double sum2 = 0;
+		double j = 0;
+		while (j <= 100)	{
+			sum2 = j+ sum2;
+			j++;
+		}
+		long total = (long) Math.pow(sum2, 2);
+		System.out.println(total);
+		System.out.println(total - sum);
+	}
+}
